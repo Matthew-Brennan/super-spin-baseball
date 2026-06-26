@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cbul24k8y6r05"]
+
+[ext_resource type="Texture2D" uid="uid://bcuao2tnb5okm" path="res://sprites/ballnchain.png" id="1_c4u5d"]
+[ext_resource type="Script" uid="uid://c2p6ebxxy1rc7" path="res://ball_and_chain.gd" id="2_qwbf5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_amvwn"]
+
+[node name="BallAndChain" type="Sprite2D" unique_id=1572458715]
+rotation = 1.5707964
+texture = ExtResource("1_c4u5d")
+offset = Vector2(4, 0)
+script = ExtResource("2_qwbf5")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=346968787]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=2026536161]
+shape = SubResource("CapsuleShape2D_amvwn")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dri186t5bbju7"]
+
+[ext_resource type="Script" uid="uid://bldo26b8llqlj" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://ckytl1yhwas1b" path="res://sprites/tempPlayer.png" id="2_hqtel"]
+[ext_resource type="PackedScene" uid="uid://cbul24k8y6r05" path="res://ball_and_chain.tscn" id="3_i3pqv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_amvwn"]
+
+[node name="player" type="Node2D" unique_id=1259384809]
+script = ExtResource("1_i3pqv")
+ball_and_chain = ExtResource("3_i3pqv")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1370453106]
+texture = ExtResource("2_hqtel")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Body" unique_id=1711859905]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/StaticBody2D" unique_id=2093278473]
+shape = SubResource("CircleShape2D_amvwn")
+
+[node name="BallAndChain" parent="." unique_id=1572458715 instance=ExtResource("3_i3pqv")]
