@@ -9,6 +9,7 @@
 [node name="player" type="Node2D" unique_id=1259384809]
 script = ExtResource("1_i3pqv")
 ball_and_chain = ExtResource("3_i3pqv")
+top_speed = 500.0
 
 [node name="Body" type="Sprite2D" parent="." unique_id=1370453106]
 texture = ExtResource("2_hqtel")
