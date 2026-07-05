@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="bncStats" format=3 uid="uid://b373ouac3s4yw"]
+
+[ext_resource type="Script" uid="uid://c2p6ebxxy1rc7" path="res://Scripts/resource-ball_and_chain.gd" id="1_prw5q"]
+[ext_resource type="Texture2D" uid="uid://bcuao2tnb5okm" path="res://sprites/ballnchain.png" id="2_8avjl"]
+
+[resource]
+script = ExtResource("1_prw5q")
+texture = ExtResource("2_8avjl")
+metadata/_custom_type_script = "uid://c2p6ebxxy1rc7"

@@ -1,9 +1,15 @@
 extends Node2D
 
 # Ball and chain variables
-var chain_length = 150.0  # Distance from player to ball
-
 @export var ball_and_chain: PackedScene
+
+var currentBnC: Sprite2D
+
+
+func _ready() -> void:
+	currentBnC = ball_and_chain.instantiate()
+	add_child(currentBnC)
+	
 
 func _physics_process(delta):
 	# Get mouse position relative to player
@@ -13,4 +19,4 @@ func _physics_process(delta):
 	var direction = (mouse_pos - global_position).normalized()
 	
 	# Position the ball and chain in the direction of the mouse
-	ball_and_chain.global_position = global_position + direction * chain_length
+	currentBnC.global_position = global_position + direction * currentBnC.chain_length
